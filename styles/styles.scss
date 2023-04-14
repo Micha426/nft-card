@@ -1,0 +1,146 @@
+// Project color variables
+$firefly: #0d1a2d; // Very dark blue for body background
+$valhalla: #15273f; // Very dark blue for card background
+$polo-blue: #8aaad9;  // Soft blue
+$white: #fff; // Cyan
+$nepal: #8BACD9;
+
+// Project font variables
+$base-font: 'Outfit', sans-serif;
+
+// body styles
+body {
+  background-color: $firefly;
+  font-family: $base-font;
+  font-weight: 400;
+  color: $white;
+  font-size: 16px;
+}
+
+// responsive img
+img {
+  width: 100%;
+  height: auto;
+}
+
+// h1 font size
+h1 {
+  font-size: 1.375rem;
+  margin: 24px 0 16px 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+// landmark main styles
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  width: 350px;
+  padding: 1.5rem;
+  background-color: $valhalla;
+  border-radius: 16px;
+  margin: 0 24px;
+
+  .image-wrapper {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      display: block;
+    }
+
+    &:hover {
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        background-color: rgb(0, 255, 248, 0.5);
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/icon-view.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+    }
+
+  }
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: $nepal;
+    margin: 0 0 24px 0;
+  }
+
+  .nft-card-info {
+    display: flex;
+    justify-content: space-between;
+
+    // general styles items
+    span {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin: 0 7px 0 0;
+      }
+
+    }
+
+    .nft-card-info-value {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+  }
+
+
+  footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #2E405A;
+    padding: 16px 0 0 0;
+    margin: 24px 0 8px 0;
+
+    img {
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      border: 1px solid $white;
+      margin: 0 16px 0 0;
+    }
+
+    .text-info {
+      color: $nepal;
+      margin: 0 5px 0 0;
+    }
+
+    span {
+
+      &:last-child{
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
+}
+
+// hide attribution
+.attribution {
+  display: none;
+}
